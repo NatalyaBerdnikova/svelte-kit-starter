@@ -1,0 +1,62 @@
+@mixin font-family-sans
+  font-family: Futura, PatsySans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+
+@mixin font-family-alt
+  font-family: SuisseIntl, PatsySans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+
+@mixin button-reset
+  border: none
+  appearance: none
+  background-color: transparent
+  border-radius: 0
+  text-decoration: none
+  user-select: none
+
+@mixin animated
+  transition-duration: 0.35s
+  transition-property: opacity, color, background-color, transform
+  transition-timing-function: ease-out
+
+  &:hover
+    transition: none
+
+@mixin hover-default
+  @include animated
+
+  &:hover
+    opacity: 0.8
+
+  &:active
+    opacity: 0.6
+
+
+@mixin input-reset
+  border: none
+  appearance: none
+  background-color: transparent
+  border-radius: 0
+
+@mixin retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx)
+    @content
+
+@mixin hover-rotate
+  &:hover
+    transform: rotate(7deg)
+
+@mixin controls-borders
+  border-top: 1px solid rgba($clr_white, 0.1)
+  border-bottom: 1px solid rgba($clr_white, 0.1)
+
+  &:not(:first-child)
+    border-left: 1px solid rgba($clr_white, 0.1)
+
+  &:first-of-type
+    border-left: 1px solid rgba($clr_white, 0.1)
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+
+  &:last-of-type
+    border-right: 1px solid rgba($clr_white, 0.1)
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
