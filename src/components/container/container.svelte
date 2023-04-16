@@ -1,7 +1,7 @@
 <script>
-	import style from './container.module.sass';
+  import style from "./container.module.sass";
 </script>
 
 <div class={style.container}>
-	<slot />
+  <slot />
 </div>
