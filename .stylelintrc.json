@@ -18,6 +18,6 @@
     ],
     "selector-pseudo-class-no-unknown": true
   },
-  "ignoreFiles": ["src/sass/**/*.{sass,scss}", "./dist/**/*.{sass,scss,css}"],
+  "ignoreFiles": ["src/sass/**/*.{sass,scss}", "./.svelte-kit/**/*.{sass,scss,css}"],
   "plugins": ["stylelint-order"]
 }
